@@ -32,14 +32,14 @@ int main() {
     std::cout << "Enter the text you want to encrypt: " << std::endl;
     std::getline(std::cin, text);
 
-    std::cout << "How many characters to shift?";
+    std::cout << "How many characters to shift? " << std::endl;
     std::cin >> offset;
 
     while (offset == 0) {
         count += 1;
         std::cout << count;
-        std::cout << "You entered an invalid value" << std::endl;
-        std::cout << "How many characters to shift?" << std::endl;
+        std::cout << "You entered an invalid value!" << std::endl;
+        std::cout << "How many characters to shift? " << std::endl;
         std::cin >> offset;
 
         if (count > 10) break;
@@ -47,7 +47,5 @@ int main() {
 
     encrypt_caesar(text, offset);
     std::cout << std::endl;
-    decrypt_caesar(text, offset);
-
     return 0;
 }
